@@ -10,5 +10,8 @@
   "license": "MIT",
   "volta": {
     "node": "20.11.1"
+  },
+  "devDependencies": {
+    "electron": "^29.0.1"
   }
 }
