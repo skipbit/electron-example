@@ -1,10 +1,11 @@
-const { app, BrowserWindow } = require('electron/main')
+const { app, BrowserWindow, screen } = require('electron/main')
 const path = require('node:path')
 
 const createWindow = () => {
+    const primaryDisplay = screen.getPrimaryDisplay()
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: primaryDisplay.size.width,
+        height: primaryDisplay.size.height,
         frame: false,
         // kiosk: true,
         webPreferences: {
